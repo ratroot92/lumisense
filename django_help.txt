@@ -1,0 +1,76 @@
+
+
+this is django complete auth 
+user name is asd and password is asd
+routes are
+/login
+/register
+/home
+
+
+
+
+
+#create  virtual environment 
+virtaulenv --no-site-packages django-mike
+ 
+// this is will prevent system from including any global python things into virtual env
+
+#now change to virtual environment 
+source django-mike/bin/activate
+
+# cd to django-mike
+cd django-mike
+
+
+#install djang0 using command
+
+easy_install Django
+
+
+#create a project bash should inside django-mike
+django-admin.py  startproject django_test
+
+
+cd django_test
+
+# run the server via 
+python manage.py runserver
+
+
+create your first app where there is manage.py 
+
+python manage.py startapp calc
+
+
+generate csrf token 
+
+{% csrf_token %}
+
+
+
+#install mysql client 
+pip3 install mysqlclient
+#mysql drivers 
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'OSINT',
+        'USER': 'root',
+        'PASSWORD': 'asd',
+        'HOST': '127.0.0.1',   # Or an IP Address that your DB is hosted on
+        'PORT': '3306',
+    }
+}
+
+
+#run migrations
+ python manage.py migrate 
+
+#create a super user 
+
+pyhton manange.py createsuperuser
+
+
+ 
