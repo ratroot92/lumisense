@@ -19,11 +19,11 @@ def login(request):
                 return redirect('/login')
            else:
                authorize(request,user)
-               return redirect('/home')
+               return redirect('/')
            
        else:
            if(request.user.is_authenticated):
-               return redirect('/home')
+               return redirect('/')
            form = AuthenticationForm()
            
        return render(request, 'auth/login.html', {'title': 'Login', 'form': form})
