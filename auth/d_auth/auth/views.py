@@ -54,3 +54,26 @@ def logout(request):
           messages.add_message(request,messages.INFO,'Login first')
       return redirect('/login')
           
+          
+def lumilogin(request):
+    return render(request,'auth/LumiLogin.html');
+
+def lumidashbaord(request):
+    return render (request,'lumidashboard.html');
+
+
+
+def page1(request):
+    return render (request,'lumi1.html')
+
+
+def page2(request):
+    return render (request,'lumi2.html')
+
+
+def page3(request):
+    return render (request,'lumi3.html')
+
+
+def page4(request):
+    return render (request,'lumi4.html')

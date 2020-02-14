@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+    <title>Log in | Django site admin</title>
+    <link rel="stylesheet" type="text/css" href="/static/admin/css/base.css">
+    <link rel="stylesheet" type="text/css" href="/static/admin/css/login.css">
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/static/admin/css/responsive.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="robots" content="NONE,NOARCHIVE">
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&amp;subset=latin" rel="stylesheet">
+    <style>
+        html {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            max-height: 100vh;
+
+            float: left;
+            width: 100vw;
+        }
+
+        input {
+            border: 0 !important;
+            outline: 0 !important;
+            border-bottom: 2px solid white !important;
+        }
+
+        input:focus {
+            border-color: green
+        }
+
+        ::placeholder {
+            color: white;
+            font-size: 40px;
+
+
+        }
+
+        .input-container {
+            display: flex;
+            width: 100%;
+            margin-bottom: 15px;
+        }
+
+        /* Style the form icons */
+        .icon {
+
+            background: transparent;
+            color: white;
+            min-width: 70px;
+            text-align: center;
+            margin-top: 12px;
+        }
+
+        /* Style the input fields */
+        .input-field {
+            width: 100%;
+            padding: 10px;
+            outline: none;
+
+        }
+
+        input[type="text"] {
+
+
+            color: #fff;
+            font-size: 30px;
+            ;
+        }
+        
+    </style>
+
+</head>
+
+
+<body>
+    <div class="container-fluid" style="height :100vh;">
+        <div class="row" style="height:6vh;">
+            <div class="col-md-12 bg-dark" style="height:100vh;">
+
+            </div>
+        </div>
+        <div class="row" style="height :94vh;">
+            <div class="col-md-6 bg-white  m-0 p-0 " style="height :100vh;">
+                <div class="bg-white w-100" style="height:100vh;" >
+                    <div class=" bg-white mx-auto my-auto text-center"style="border-radius:2px 2px 200px 200px; border: 0px solid;padding: 10px;box-shadow: 0px 0px 25px 5px rgb(53.3, 53.3, 53.3,0.6);
+                            width:65%;height:70vh">
+                        <p class=" font-weight-bold" style="padding-top:300px;font-size:8.5vh; 
+                        color: #007bff;
+                        text-shadow: 2px 2px 12px #000000;">LumiSense AI </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 m-0 p-0 " style="height :100vh;">
+                <div class=" w-100 " style="height:100vh;background-image: linear-gradient(to right, #4169E1,#00008B );   ">
+                    <div class=" w-100" style="height:30vh">
+
+                    </div>
+
+                    <div class="w-100" style="height:70vh">
+                        <p style=";font-size:6vh;color:white;margin-left:100px; ">Login</p>
+
+                        <div class="form-group mx-auto my-auto text-center" style="width:80%!important;">
+                            <div class="input-container mt-5 ">
+                                <i class="fa fa-user icon fa-3x"></i>
+                                <input type="text" class="" style="height:80px;width:100%;background-color:transparent;"
+                                    placeholder="Username">
+                            </div>
+
+                            <div class="input-container mt-5">
+                                <i class="fa fa-eye-slash icon fa-3x"></i>
+                                <input type="text" class="" style="height:80px;width:100%;background-color:transparent;"
+                                    placeholder="Password">
+                            </div>
+                            <button class="btn" type="button"
+                                style="width: 450px;height:80px;background-color:#ffff;font-size:35px;border-radius:0px 0px 0px 0px;margin-top:50px;   ">Login
+                                to your account</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>
