@@ -56,24 +56,54 @@ def logout(request):
           
           
 def lumilogin(request):
-    return render(request,'auth/LumiLogin.html');
+       if request.method == 'POST':
+           username=request.POST['username'];
+           password=request.POST['password'];
+           if(username is not None or password is not None):
+                user = authenticate(request, username=username, password=password)
+            # if user is not authenticated
+           if (user is not None):
+                authorize(request, user)
+                return render (request,'lumi1.html');
+           else:   
+            return render(request,'auth/LumiLogin.html');
+       else:
+        return render(request,'auth/LumiLogin.html');
+           
+    
 
 def lumidashbaord(request):
-    return render (request,'lumidashboard.html');
+      if(request.user.is_authenticated):
+        return render (request,'lumidashboard.html');
+      else:
+        return render(request,'auth/LumiLogin.html');
 
 
 
 def page1(request):
-    return render (request,'lumi1.html')
+    if(request.user.is_authenticated):
+        return render (request,'lumi1.html');
+    else:
+        return render(request,'auth/LumiLogin.html');
 
 
 def page2(request):
-    return render (request,'lumi2.html')
+     if(request.user.is_authenticated):
+        return render (request,'lumi2.html');
+     else:
+        return render(request,'auth/LumiLogin.html');
 
 
 def page3(request):
-    return render (request,'lumi3.html')
+     if(request.user.is_authenticated):
+        return render (request,'lumi3.html');
+     else:
+        return render(request,'auth/LumiLogin.html');
+
 
 
 def page4(request):
-    return render (request,'lumi4.html')
+    if(request.user.is_authenticated):
+        return render (request,'lumi4.html');
+    else:
+        return render(request,'auth/LumiLogin.html');

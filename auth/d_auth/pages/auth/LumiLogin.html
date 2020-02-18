@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 
 <html lang="en-us">
@@ -31,7 +32,7 @@
             padding: 0;
             height: 100vh;
             max-height: 100vh;
-
+            overflow-y:hidden;
             float: left;
             width: 100vw;
         }
@@ -91,18 +92,18 @@
 
 
 <body>
-    <div class="container-fluid" style="height :100vh;">
-        <div class="row" style="height:6vh;">
-            <div class="col-md-12 bg-dark" style="height:100vh;">
+    <div class="container-fluid" style="height:100vh;">
+      
+        <div class="row" style="height :100vh;">
+            <div class="col-md-12 bg-dark"  style="height:40px">
 
             </div>
-        </div>
-        <div class="row" style="height :94vh;">
             <div class="col-md-6 bg-white  m-0 p-0 " style="height :100vh;">
                 <div class="bg-white w-100" style="height:100vh;" >
                     <div class=" bg-white mx-auto my-auto text-center"style="border-radius:2px 2px 200px 200px; border: 0px solid;padding: 10px;box-shadow: 0px 0px 25px 5px rgb(53.3, 53.3, 53.3,0.6);
                             width:65%;height:70vh">
-                        <p class=" font-weight-bold" style="padding-top:300px;font-size:8.5vh; 
+                            <img src="{% static 'images/logo.png' %}" class="img-fluid" height="280" width="280" />
+                        <p class=" font-weight-bold" style="font-size:8.5vh; 
                         color: #007bff;
                         text-shadow: 2px 2px 12px #000000;">LumiSense AI </p>
                     </div>
@@ -114,27 +115,28 @@
                     <div class=" w-100" style="height:30vh">
 
                     </div>
-
+<form method="POST" action="/lumi/login/">
+    {% csrf_token %}
                     <div class="w-100" style="height:70vh">
                         <p style=";font-size:6vh;color:white;margin-left:100px; ">Login</p>
 
                         <div class="form-group mx-auto my-auto text-center" style="width:80%!important;">
                             <div class="input-container mt-5 ">
                                 <i class="fa fa-user icon fa-3x"></i>
-                                <input type="text" class="" style="height:80px;width:100%;background-color:transparent;"
-                                    placeholder="Username">
+                                <input type="text" class="" name="username" id="username" style="height:80px;width:100%;background-color:transparent;"placeholder="Username" required />
                             </div>
 
                             <div class="input-container mt-5">
                                 <i class="fa fa-eye-slash icon fa-3x"></i>
-                                <input type="text" class="" style="height:80px;width:100%;background-color:transparent;"
-                                    placeholder="Password">
+                                <input type="password" class="" name="password" id="password" style="height:80px;width:100%;background-color:transparent;"
+                                    placeholder="Password" required />
                             </div>
-                            <button class="btn" type="button"
+                            <button class="btn" type="submit"
                                 style="width: 450px;height:80px;background-color:#ffff;font-size:35px;border-radius:0px 0px 0px 0px;margin-top:50px;   ">Login
                                 to your account</button>
                         </div>
                     </div>
+                </form>
                 </div>
             </div>
 

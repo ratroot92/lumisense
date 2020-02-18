@@ -9,50 +9,550 @@
     #map {
         height: 700px;
       }
+      #badge{
+        height:35px!important;
+        width:100px!important;
+        border:2px solid white;
+        border-radius:15px;
+        
+        
+            }
     
 </style>
-<div class="container-fluid " style="height:100%;background-color:#6c757d;
-background: url('{% static 'images/1.jpg' %}">
-<div class="row">
-    <div class="col-md-12 m-0 p-0 "style="">
-        <div  class="text-center" style="height:100px;width:125px;background-color:#EBEDF2
-                    ;border-radius:0px 0px 40px 40px;
-                    margin-left:100px;">
-       <div class="h-100 w-100">
-        <p class="pt-5 font-weight-bold ">  LumiSense AI</p>
-       </div>
-        </div>
-    </div>
-</div>
-<div class="row">
-    <div class="col-md-1 ">
-<div style="position: absolute;">
-    <ul class="list-group list-unstyled d-flex flex-column justify-content-center align-items-center"
-     style="position:relative;top:100px;height:600px;
-            border-radius:0px 85px 85px 0px ;
-            background-color:aliceblue;
-            
-            width  ">
-            <li class="p-4"><a href="/lumi/page1"><i class="fa fa-cubes fa-3x"></a></i></li>
-            <li class="p-4"><a href="/lumi/page2"><i class="fa fa-cubes fa-3x"></a></i></li>
-            <li class="p-4"><a href="/lumi/page3"><i class="fa fa-cubes fa-4x"></a></i></li>
-            <li class="p-4"><a href="/lumi/page4"><i class="fa fa-cubes fa-3x"></a></i></li>
-        
+<style>
+  /* width */
+  ::-webkit-scrollbar {
+    width: 15px;
 
-    </ul>
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px rgb(253, 250, 250); 
+    border-radius: 10px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgb(0, 0, 0); 
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #b30000; 
+  }
+  </style>
+<div class="container-fluid " style="height:100%;background-color:#6c757d;
+background-image: url('{% static 'icons/background 1 jpeg-01.jpg' %}')">
+
+<div class="row">
+  <div class="col-md-4 m-0 p-0  "style="">
+      <div  class="text-center" style="height:110px;width:125px;background-color:#EBEDF2
+                  ;border-radius:0px 0px 40px 40px;
+                  margin-left:100px;">
+     <div class="h-100 w-100">
+       <img src="{% static 'images/logo.png'%}" class="img-fluid" height="40px" width="40px" />
+      <p class=" font-weight-bold ">  LumiSense AI</p>
+
+      
+     </div>
+      </div>
+      
+  </div>
+  <div class="col-md-2"></div>
+  <div class="col-md-6 pt-3">
+    <span>
+      <button class="btn  btn-outline-light p-0 m-0  ml-5 "style="height:30px;width:200px">Automatic</button>
+      <button class="btn  btn-outline-light p-0 m-0  ml-5 "style="height:30px;width:200px">Manual</button>
+      <button class="btn  btn-outline-light p-0 m-0  ml-5 "style="height:30px;width:200px">Schedule</button>
+    </span>
+  </div>
 </div>
+<div class="row ">
+<div class="col-md-2"></div>
+<div class="col-md-3 border border-white p-2" style="border-radius:25px;">
+<div class="p-2">
+  <input type="checkbox" class="p-0 m-0 " checked data-toggle="toggle" data-on="<span class='badge  'style=' box-shadow:  0 0 10px rgb(0, 0, 0);width:80px;height:35px;border:2px solid white;background-color:rgb(0,0,205);border-radius:20px;'>&nbsp;</span><span class='font-weight-bold 'style='font-size:22px'>&nbsp;ON</span>" 
+  data-off="OFF" data-size="large" data-onstyle="light" data-style="slow" data-offstyle="danger" />
+  <button type="button"class="btn btn-light float-right font-weight-bold" style="height:52px;width:200px;border-radius:20px;font-size:18px;    box-shadow: inset 0 0 10px rgb(29, 28, 28);  letter-spacing: 0.5em;">SUBMIT</button>
+</div>
+ 
+</div>
+  
+</div>
+<div class="row mt-1">
+  <div class="col-md-1 m-0 p-0  ">
+    <div style="position: absolute;">
+        <ul class="list-group list-unstyled d-flex flex-column justify-content-start align-items-center"
+         style="position:relative;top:;height:600px;
+                border-radius:0px 85px 85px 0px ;
+                background-color:rgb(203, 204, 206); ">
+                <li class="p-2 mt-5"><a href="/lumi/page1"><img src="{% static 'icons/admin icon.png'%}" class="img-fluid" height="100" width="100" /></a></li>
+                <li class="p-2"><a href="/lumi/page2"><img src="{% static 'icons/map icon.png'%}" class="img-fluid" height="100" width="100" /></a></li>
+                <li class="p-2"><a href="/lumi/page3"><img src="{% static 'icons/analysis icon.png'%}" class="img-fluid" height="100" width="100" /></a></li>
+                <li class="p-2"><a href="/lumi/page4"><img src="{% static 'icons/settings icon.png'%}" class="img-fluid" height="100" width="100" /></a></li>
+    
+        </ul>
     </div>
-    <div class="col-md-11">
-        <div class="row">
-            <div class="col-md-1"></div>
-            <div class="col-md-9">
-                <div class="h-100 w-100 m-0 p-0 ">
-                    <div id="map"  style="border-radius:50px;"></div>
-                </div>
-            </div>
-            <div class="col-md-1"></div>
         </div>
+<div class="col-md-11 m-0 p-0 " style="height:680px;overflow-x: hidden!important;border-radius:15px;">
+<div class="row p-2">
+  <div class="col-md-3 ">
+    <div class="h-100 w-100 p-2 border border-white " style="border-radius:10px;">
+      <div class="w-100 p-2 d-flex justify-content-between align-items-center">
+        <span class="font-weight-bold text-white"style="font-size:35px;">12h7</span>
+        <span id="badge" style="background: linear-gradient(to bottom, #746bf0 0%, #3936e7 100%);"></span>
+      </div>
+      <div class=" p-2 d-flex justify-content-between align-items-center mx-auto my-auto"style="width:90%;border-bottom:1px solid white ">
+        <span class="text-white" style="font-size:22px" >Current</span>
+        <span class="text-white" style="font-size:22px" >12 V</span>
+      </div>
+
+      <div class=" p-2 d-flex justify-content-between align-items-center mx-auto my-auto"style="width:90%;border-bottom:1px solid white ">
+        <span class="text-white" style="font-size:22px" >Brightness</span>
+        <span class="text-white" style="font-size:22px" >67%</span>
+      </div>
+
+
+      <div class=" p-2 d-flex justify-content-between align-items-center mx-auto my-auto"style="width:90%; ">
+        <span class="text-white" style="font-size:22px" >Fault</span>
+        <span class="text-white" style="font-size:22px" >Yes</span>
+      </div>
     </div>
+  </div>
+
+
+
+  <div class="col-md-3 ">
+    <div class="h-100 w-100 p-2 border border-white " style="border-radius:10px;">
+      <div class="w-100 p-2 d-flex justify-content-between align-items-center">
+        <span class="font-weight-bold text-white"style="font-size:35px;">12h7</span>
+        <span id="badge" style="background: linear-gradient(to bottom, #eb7f88 0%, #ec3452 100%);"></span>
+      </div>
+      <div class=" p-2 d-flex justify-content-between align-items-center mx-auto my-auto"style="width:90%;border-bottom:1px solid white ">
+        <span class="text-white" style="font-size:22px" >Current</span>
+        <span class="text-white" style="font-size:22px" >12 V</span>
+      </div>
+
+      <div class=" p-2 d-flex justify-content-between align-items-center mx-auto my-auto"style="width:90%;border-bottom:1px solid white ">
+        <span class="text-white" style="font-size:22px" >Brightness</span>
+        <span class="text-white" style="font-size:22px" >67%</span>
+      </div>
+
+
+      <div class=" p-2 d-flex justify-content-between align-items-center mx-auto my-auto"style="width:90%; ">
+        <span class="text-white" style="font-size:22px" >Fault</span>
+        <span class="text-white" style="font-size:22px" >Yes</span>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <div class="col-md-3 ">
+    <div class="h-100 w-100 p-2 border border-white " style="border-radius:10px;">
+      <div class="w-100 p-2 d-flex justify-content-between align-items-center">
+        <span class="font-weight-bold text-white"style="font-size:35px;">12h7</span>
+        <span id="badge" style="background: linear-gradient(to bottom, #746bf0 0%, #3936e7 100%);"></span>
+      </div>
+      <div class=" p-2 d-flex justify-content-between align-items-center mx-auto my-auto"style="width:90%;border-bottom:1px solid white ">
+        <span class="text-white" style="font-size:22px" >Current</span>
+        <span class="text-white" style="font-size:22px" >12 V</span>
+      </div>
+
+      <div class=" p-2 d-flex justify-content-between align-items-center mx-auto my-auto"style="width:90%;border-bottom:1px solid white ">
+        <span class="text-white" style="font-size:22px" >Brightness</span>
+        <span class="text-white" style="font-size:22px" >67%</span>
+      </div>
+
+
+      <div class=" p-2 d-flex justify-content-between align-items-center mx-auto my-auto"style="width:90%; ">
+        <span class="text-white" style="font-size:22px" >Fault</span>
+        <span class="text-white" style="font-size:22px" >Yes</span>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+  <div class="col-md-3 ">
+    <div class="h-100 w-100 p-2 border border-white " style="border-radius:10px;">
+      <div class="w-100 p-2 d-flex justify-content-between align-items-center">
+        <span class="font-weight-bold text-white"style="font-size:35px;">12h7</span>
+        <span id="badge" style="background: linear-gradient(to bottom, #eb7f88 0%, #ec3452 100%);"></span>
+      </div>
+      <div class=" p-2 d-flex justify-content-between align-items-center mx-auto my-auto"style="width:90%;border-bottom:1px solid white ">
+        <span class="text-white" style="font-size:22px" >Current</span>
+        <span class="text-white" style="font-size:22px" >12 V</span>
+      </div>
+
+      <div class=" p-2 d-flex justify-content-between align-items-center mx-auto my-auto"style="width:90%;border-bottom:1px solid white ">
+        <span class="text-white" style="font-size:22px" >Brightness</span>
+        <span class="text-white" style="font-size:22px" >67%</span>
+      </div>
+
+
+      <div class=" p-2 d-flex justify-content-between align-items-center mx-auto my-auto"style="width:90%; ">
+        <span class="text-white" style="font-size:22px" >Fault</span>
+        <span class="text-white" style="font-size:22px" >Yes</span>
+      </div>
+    </div>
+  </div>
+
+</div>
+<!-- row-1 end  -->
+
+
+
+
+
+
+
+
+<div class="row p-2">
+  <div class="col-md-3 ">
+    <div class="h-100 w-100 p-2 border border-white " style="border-radius:10px;">
+      <div class="w-100 p-2 d-flex justify-content-between align-items-center">
+        <span class="font-weight-bold text-white"style="font-size:35px;">12h7</span>
+        <span id="badge" style="background: linear-gradient(to bottom, #746bf0 0%, #3936e7 100%);"></span>
+      </div>
+      <div class=" p-2 d-flex justify-content-between align-items-center mx-auto my-auto"style="width:90%;border-bottom:1px solid white ">
+        <span class="text-white" style="font-size:22px" >Current</span>
+        <span class="text-white" style="font-size:22px" >12 V</span>
+      </div>
+
+      <div class=" p-2 d-flex justify-content-between align-items-center mx-auto my-auto"style="width:90%;border-bottom:1px solid white ">
+        <span class="text-white" style="font-size:22px" >Brightness</span>
+        <span class="text-white" style="font-size:22px" >67%</span>
+      </div>
+
+
+      <div class=" p-2 d-flex justify-content-between align-items-center mx-auto my-auto"style="width:90%; ">
+        <span class="text-white" style="font-size:22px" >Fault</span>
+        <span class="text-white" style="font-size:22px" >Yes</span>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="col-md-3 ">
+    <div class="h-100 w-100 p-2 border border-white " style="border-radius:10px;">
+      <div class="w-100 p-2 d-flex justify-content-between align-items-center">
+        <span class="font-weight-bold text-white"style="font-size:35px;">12h7</span>
+        <span id="badge" style="background: linear-gradient(to bottom, #eb7f88 0%, #ec3452 100%);"></span>
+      </div>
+      <div class=" p-2 d-flex justify-content-between align-items-center mx-auto my-auto"style="width:90%;border-bottom:1px solid white ">
+        <span class="text-white" style="font-size:22px" >Current</span>
+        <span class="text-white" style="font-size:22px" >12 V</span>
+      </div>
+
+      <div class=" p-2 d-flex justify-content-between align-items-center mx-auto my-auto"style="width:90%;border-bottom:1px solid white ">
+        <span class="text-white" style="font-size:22px" >Brightness</span>
+        <span class="text-white" style="font-size:22px" >67%</span>
+      </div>
+
+
+      <div class=" p-2 d-flex justify-content-between align-items-center mx-auto my-auto"style="width:90%; ">
+        <span class="text-white" style="font-size:22px" >Fault</span>
+        <span class="text-white" style="font-size:22px" >Yes</span>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <div class="col-md-3 ">
+    <div class="h-100 w-100 p-2 border border-white " style="border-radius:10px;">
+      <div class="w-100 p-2 d-flex justify-content-between align-items-center">
+        <span class="font-weight-bold text-white"style="font-size:35px;">12h7</span>
+        <span id="badge" style="background: linear-gradient(to bottom, #746bf0 0%, #3936e7 100%);"></span>
+      </div>
+      <div class=" p-2 d-flex justify-content-between align-items-center mx-auto my-auto"style="width:90%;border-bottom:1px solid white ">
+        <span class="text-white" style="font-size:22px" >Current</span>
+        <span class="text-white" style="font-size:22px" >12 V</span>
+      </div>
+
+      <div class=" p-2 d-flex justify-content-between align-items-center mx-auto my-auto"style="width:90%;border-bottom:1px solid white ">
+        <span class="text-white" style="font-size:22px" >Brightness</span>
+        <span class="text-white" style="font-size:22px" >67%</span>
+      </div>
+
+
+      <div class=" p-2 d-flex justify-content-between align-items-center mx-auto my-auto"style="width:90%; ">
+        <span class="text-white" style="font-size:22px" >Fault</span>
+        <span class="text-white" style="font-size:22px" >Yes</span>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+  <div class="col-md-3 ">
+    <div class="h-100 w-100 p-2 border border-white " style="border-radius:10px;">
+      <div class="w-100 p-2 d-flex justify-content-between align-items-center">
+        <span class="font-weight-bold text-white"style="font-size:35px;">12h7</span>
+        <span id="badge" style="background: linear-gradient(to bottom, #eb7f88 0%, #ec3452 100%);"></span>
+      </div>
+      <div class=" p-2 d-flex justify-content-between align-items-center mx-auto my-auto"style="width:90%;border-bottom:1px solid white ">
+        <span class="text-white" style="font-size:22px" >Current</span>
+        <span class="text-white" style="font-size:22px" >12 V</span>
+      </div>
+
+      <div class=" p-2 d-flex justify-content-between align-items-center mx-auto my-auto"style="width:90%;border-bottom:1px solid white ">
+        <span class="text-white" style="font-size:22px" >Brightness</span>
+        <span class="text-white" style="font-size:22px" >67%</span>
+      </div>
+
+
+      <div class=" p-2 d-flex justify-content-between align-items-center mx-auto my-auto"style="width:90%; ">
+        <span class="text-white" style="font-size:22px" >Fault</span>
+        <span class="text-white" style="font-size:22px" >Yes</span>
+      </div>
+    </div>
+  </div>
+
+</div>
+<!-- row-2 end  -->
+
+
+<div class="row p-2">
+  <div class="col-md-3 ">
+    <div class="h-100 w-100 p-2 border border-white " style="border-radius:10px;">
+      <div class="w-100 p-2 d-flex justify-content-between align-items-center">
+        <span class="font-weight-bold text-white"style="font-size:35px;">12h7</span>
+        <span id="badge" style="background: linear-gradient(to bottom, #746bf0 0%, #3936e7 100%);"></span>
+      </div>
+      <div class=" p-2 d-flex justify-content-between align-items-center mx-auto my-auto"style="width:90%;border-bottom:1px solid white ">
+        <span class="text-white" style="font-size:22px" >Current</span>
+        <span class="text-white" style="font-size:22px" >12 V</span>
+      </div>
+
+      <div class=" p-2 d-flex justify-content-between align-items-center mx-auto my-auto"style="width:90%;border-bottom:1px solid white ">
+        <span class="text-white" style="font-size:22px" >Brightness</span>
+        <span class="text-white" style="font-size:22px" >67%</span>
+      </div>
+
+
+      <div class=" p-2 d-flex justify-content-between align-items-center mx-auto my-auto"style="width:90%; ">
+        <span class="text-white" style="font-size:22px" >Fault</span>
+        <span class="text-white" style="font-size:22px" >Yes</span>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="col-md-3 ">
+    <div class="h-100 w-100 p-2 border border-white " style="border-radius:10px;">
+      <div class="w-100 p-2 d-flex justify-content-between align-items-center">
+        <span class="font-weight-bold text-white"style="font-size:35px;">12h7</span>
+        <span id="badge" style="background: linear-gradient(to bottom, #eb7f88 0%, #ec3452 100%);"></span>
+      </div>
+      <div class=" p-2 d-flex justify-content-between align-items-center mx-auto my-auto"style="width:90%;border-bottom:1px solid white ">
+        <span class="text-white" style="font-size:22px" >Current</span>
+        <span class="text-white" style="font-size:22px" >12 V</span>
+      </div>
+
+      <div class=" p-2 d-flex justify-content-between align-items-center mx-auto my-auto"style="width:90%;border-bottom:1px solid white ">
+        <span class="text-white" style="font-size:22px" >Brightness</span>
+        <span class="text-white" style="font-size:22px" >67%</span>
+      </div>
+
+
+      <div class=" p-2 d-flex justify-content-between align-items-center mx-auto my-auto"style="width:90%; ">
+        <span class="text-white" style="font-size:22px" >Fault</span>
+        <span class="text-white" style="font-size:22px" >Yes</span>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <div class="col-md-3 ">
+    <div class="h-100 w-100 p-2 border border-white " style="border-radius:10px;">
+      <div class="w-100 p-2 d-flex justify-content-between align-items-center">
+        <span class="font-weight-bold text-white"style="font-size:35px;">12h7</span>
+        <span id="badge" style="background: linear-gradient(to bottom, #746bf0 0%, #3936e7 100%);"></span>
+      </div>
+      <div class=" p-2 d-flex justify-content-between align-items-center mx-auto my-auto"style="width:90%;border-bottom:1px solid white ">
+        <span class="text-white" style="font-size:22px" >Current</span>
+        <span class="text-white" style="font-size:22px" >12 V</span>
+      </div>
+
+      <div class=" p-2 d-flex justify-content-between align-items-center mx-auto my-auto"style="width:90%;border-bottom:1px solid white ">
+        <span class="text-white" style="font-size:22px" >Brightness</span>
+        <span class="text-white" style="font-size:22px" >67%</span>
+      </div>
+
+
+      <div class=" p-2 d-flex justify-content-between align-items-center mx-auto my-auto"style="width:90%; ">
+        <span class="text-white" style="font-size:22px" >Fault</span>
+        <span class="text-white" style="font-size:22px" >Yes</span>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+  <div class="col-md-3 ">
+    <div class="h-100 w-100 p-2 border border-white " style="border-radius:10px;">
+      <div class="w-100 p-2 d-flex justify-content-between align-items-center">
+        <span class="font-weight-bold text-white"style="font-size:35px;">12h7</span>
+        <span id="badge" style="background: linear-gradient(to bottom, #eb7f88 0%, #ec3452 100%);"></span>
+      </div>
+      <div class=" p-2 d-flex justify-content-between align-items-center mx-auto my-auto"style="width:90%;border-bottom:1px solid white ">
+        <span class="text-white" style="font-size:22px" >Current</span>
+        <span class="text-white" style="font-size:22px" >12 V</span>
+      </div>
+
+      <div class=" p-2 d-flex justify-content-between align-items-center mx-auto my-auto"style="width:90%;border-bottom:1px solid white ">
+        <span class="text-white" style="font-size:22px" >Brightness</span>
+        <span class="text-white" style="font-size:22px" >67%</span>
+      </div>
+
+
+      <div class=" p-2 d-flex justify-content-between align-items-center mx-auto my-auto"style="width:90%; ">
+        <span class="text-white" style="font-size:22px" >Fault</span>
+        <span class="text-white" style="font-size:22px" >Yes</span>
+      </div>
+    </div>
+  </div>
+
+</div>
+<!-- row-3 end  -->
+
+
+<div class="row p-2">
+  <div class="col-md-3 ">
+    <div class="h-100 w-100 p-2 border border-white " style="border-radius:10px;">
+      <div class="w-100 p-2 d-flex justify-content-between align-items-center">
+        <span class="font-weight-bold text-white"style="font-size:35px;">12h7</span>
+        <span id="badge" style="background: linear-gradient(to bottom, #746bf0 0%, #3936e7 100%);"></span>
+      </div>
+      <div class=" p-2 d-flex justify-content-between align-items-center mx-auto my-auto"style="width:90%;border-bottom:1px solid white ">
+        <span class="text-white" style="font-size:22px" >Current</span>
+        <span class="text-white" style="font-size:22px" >12 V</span>
+      </div>
+
+      <div class=" p-2 d-flex justify-content-between align-items-center mx-auto my-auto"style="width:90%;border-bottom:1px solid white ">
+        <span class="text-white" style="font-size:22px" >Brightness</span>
+        <span class="text-white" style="font-size:22px" >67%</span>
+      </div>
+
+
+      <div class=" p-2 d-flex justify-content-between align-items-center mx-auto my-auto"style="width:90%; ">
+        <span class="text-white" style="font-size:22px" >Fault</span>
+        <span class="text-white" style="font-size:22px" >Yes</span>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="col-md-3 ">
+    <div class="h-100 w-100 p-2 border border-white " style="border-radius:10px;">
+      <div class="w-100 p-2 d-flex justify-content-between align-items-center">
+        <span class="font-weight-bold text-white"style="font-size:35px;">12h7</span>
+        <span id="badge" style="background: linear-gradient(to bottom, #eb7f88 0%, #ec3452 100%);"></span>
+      </div>
+      <div class=" p-2 d-flex justify-content-between align-items-center mx-auto my-auto"style="width:90%;border-bottom:1px solid white ">
+        <span class="text-white" style="font-size:22px" >Current</span>
+        <span class="text-white" style="font-size:22px" >12 V</span>
+      </div>
+
+      <div class=" p-2 d-flex justify-content-between align-items-center mx-auto my-auto"style="width:90%;border-bottom:1px solid white ">
+        <span class="text-white" style="font-size:22px" >Brightness</span>
+        <span class="text-white" style="font-size:22px" >67%</span>
+      </div>
+
+
+      <div class=" p-2 d-flex justify-content-between align-items-center mx-auto my-auto"style="width:90%; ">
+        <span class="text-white" style="font-size:22px" >Fault</span>
+        <span class="text-white" style="font-size:22px" >Yes</span>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <div class="col-md-3 ">
+    <div class="h-100 w-100 p-2 border border-white " style="border-radius:10px;">
+      <div class="w-100 p-2 d-flex justify-content-between align-items-center">
+        <span class="font-weight-bold text-white"style="font-size:35px;">12h7</span>
+        <span id="badge" style="background: linear-gradient(to bottom, #746bf0 0%, #3936e7 100%);"></span>
+      </div>
+      <div class=" p-2 d-flex justify-content-between align-items-center mx-auto my-auto"style="width:90%;border-bottom:1px solid white ">
+        <span class="text-white" style="font-size:22px" >Current</span>
+        <span class="text-white" style="font-size:22px" >12 V</span>
+      </div>
+
+      <div class=" p-2 d-flex justify-content-between align-items-center mx-auto my-auto"style="width:90%;border-bottom:1px solid white ">
+        <span class="text-white" style="font-size:22px" >Brightness</span>
+        <span class="text-white" style="font-size:22px" >67%</span>
+      </div>
+
+
+      <div class=" p-2 d-flex justify-content-between align-items-center mx-auto my-auto"style="width:90%; ">
+        <span class="text-white" style="font-size:22px" >Fault</span>
+        <span class="text-white" style="font-size:22px" >Yes</span>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+  <div class="col-md-3 ">
+    <div class="h-100 w-100 p-2 border border-white " style="border-radius:10px;">
+      <div class="w-100 p-2 d-flex justify-content-between align-items-center">
+        <span class="font-weight-bold text-white"style="font-size:35px;">12h7</span>
+        <span id="badge" style="background: linear-gradient(to bottom, #eb7f88 0%, #ec3452 100%);"></span>
+      </div>
+      <div class=" p-2 d-flex justify-content-between align-items-center mx-auto my-auto"style="width:90%;border-bottom:1px solid white ">
+        <span class="text-white" style="font-size:22px" >Current</span>
+        <span class="text-white" style="font-size:22px" >12 V</span>
+      </div>
+
+      <div class=" p-2 d-flex justify-content-between align-items-center mx-auto my-auto"style="width:90%;border-bottom:1px solid white ">
+        <span class="text-white" style="font-size:22px" >Brightness</span>
+        <span class="text-white" style="font-size:22px" >67%</span>
+      </div>
+
+
+      <div class=" p-2 d-flex justify-content-between align-items-center mx-auto my-auto"style="width:90%; ">
+        <span class="text-white" style="font-size:22px" >Fault</span>
+        <span class="text-white" style="font-size:22px" >Yes</span>
+      </div>
+    </div>
+  </div>
+
+</div>
+<!-- row-4 end  -->
+
+
+
+
+
+
+
+
+
+
+
+</div>
 </div>
 
 </div>
